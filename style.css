@@ -20,18 +20,18 @@ html { scroll-behavior: smooth; }
 .cta-button { display: inline-block; padding: 12px 30px; background-color: var(--primary-color); color: var(--white-color); text-decoration: none; border-radius: 50px; font-weight: 600; transition: background-color 0.3s ease, transform 0.3s ease; border: none; }
 .cta-button:hover { background-color: var(--secondary-color); transform: translateY(-3px); }
 
-/* --- CABEÇALHO BRANCO AJUSTADO --- */
+/* --- AJUSTE FINAL DO CABEÇALHO --- */
 .top-header {
     background-color: var(--white-color);
-    padding: 0.5rem 0; /* <-- ALTURA DIMINUÍDA AQUI */
+    padding: 6px 0; /* <-- Espaçamento vertical mínimo */
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Sombra mais sutil */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 .header-logo {
-    max-height: 40px; /* Logo um pouco menor para caber melhor */
+    max-height: 35px; /* <-- Logo menor para um cabeçalho mais fino */
 }
 
 /* --- SEÇÃO HERO AJUSTADA --- */
@@ -62,3 +62,34 @@ html { scroll-behavior: smooth; }
 .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
 .feature-icon { margin-bottom: 1.5rem; color: var(--primary-color); width: 48px; height: 48px; }
 .feature-card h3 { margin-bottom: 1.5rem; color: var(--dark-color); font-size: 1.4rem; }
+.feature-card ul { list-style: none; padding: 0; }
+.feature-card ul li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+.feature-card ul li .check { color: var(--primary-color); font-weight: 600; }
+#investimento .investment-box { background-color: rgba(0, 0, 0, 0.2); max-width: 500px; margin: 2rem auto 0; padding: 2.5rem; border-radius: 15px; }
+#investimento .price { font-size: 2.5rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem; }
+#investimento .investment-note { font-size: 1rem; font-weight: 300; margin-bottom: 2rem; opacity: 0.9; }
+#investimento ul { list-style: none; padding: 0; }
+#investimento li { margin-bottom: 0.8rem; }
+.footer { background-color: var(--light-color); color: var(--dark-color); padding: 4rem 0; }
+.steps { list-style: none; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin: 3rem 0; }
+.steps li { display: flex; align-items: center; gap: 1rem; font-size: 1.1rem; }
+.steps span { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: var(--primary-color); color: var(--white-color); border-radius: 50%; font-weight: 600; }
+.final-cta { margin-bottom: 1rem; }
+.contact-info { font-size: 0.9rem; opacity: 0.7; }
+
+@media (min-width: 768px) {
+    .section { padding: 6rem 0; }
+    .section h2 { font-size: 2.5rem; }
+    .hero h1 { font-size: 3.2rem; }
+    .hero .subtitle { font-size: 1.3rem; }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .steps { flex-direction: row; justify-content: center; gap: 2rem; }
+    #investimento .price { font-size: 3rem; }
+}
+@media (min-width: 960px) {
+    .team-grid { grid-template-columns: repeat(3, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1100px) {
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
