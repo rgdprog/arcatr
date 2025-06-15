@@ -7,15 +7,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <div class="top-header">
-        <img src="logo-rgd.png" alt="Logo RGD Soluções Gráficas" class="header-logo">
-    </div>
+    <nav class="top-header">
+        <div class="nav-container">
+            <img src="logo-rgd.png" alt="Logo RGD Soluções Gráficas" class="header-logo">
+            <ul class="nav-menu">
+                <li><a href="#quem-somos">Time</a></li>
+                <li><a href="#proposta">Plano de Ação</a></li>
+                <li><a href="#investimento">Investimento</a></li>
+                <li><a href="#proximos-passos">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header class="hero">
-        <div class="container">
+        <div class="container" data-aos="fade-in" data-aos-duration="1500">
             <h1>Proposta de Marketing Digital Profissional</h1>
             <p class="subtitle">Apresentado por RGD SOLUÇÕES</p>
             <a href="#proposta" class="cta-button">Ver Proposta</a>
@@ -24,48 +33,53 @@
 
     <section id="quem-somos" class="section">
         <div class="container">
-            <h2>Time de Soluções</h2>
+            <h2 data-aos="fade-up">Time de Soluções</h2>
             <div class="team-grid">
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
                     <img src="darci-foto.jpeg" alt="Foto de Darci Rodrigues" class="profile-pic">
-                    <h3>Darci Rodrigues</h3>
-                    <h4>CEO (Chief Executive Officer)</h4>
-                    <p>Expertise de mercado, prospecção de leads e análise estratégica para garantir o crescimento contínuo dos nossos parceiros.</p>
+                    <h3>Darci Rodrigues</h3><h4>CEO</h4>
+                    <p>Expertise de mercado, prospecção de leads e análise estratégica.</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
                     <img src="sua-foto.jpeg" alt="Foto de Pedro Gustavo" class="profile-pic">
-                    <h3>Pedro Gustavo</h3>
-                    <h4>COO (Chief Operations Officer)</h4>
-                    <p>Especialista em AdOps e mídia programática, transformando dados em performance e campanhas em negócios lucrativos.</p>
+                    <h3>Pedro Gustavo</h3><h4>COO</h4>
+                    <p>Especialista em AdOps e mídia programática, transformando dados em performance.</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
                     <img src="paulo-foto.jpeg" alt="Foto de Paulo Ricardo" class="profile-pic">
-                    <h3>Paulo Ricardo</h3>
-                    <h4>CMO (Chief Marketing Officer)</h4>
-                    <p>Mais de 10 anos no mercado gráfico, com experiência em criação de criativos, atendimento e ideias inovadoras para posts.</p>
+                    <h3>Paulo Ricardo</h3><h4>CMO</h4>
+                    <p>Mais de 10 anos no mercado gráfico, com experiência em criação de criativos.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="desafios" class="section bg-light">
-        <div class="container"><h2>Os Desafios Atuais da Arca Turismo</h2><div class="grid-4"><div class="card"><h4>Baixo Alcance</h4><p>Dificuldade em alcançar novos seguidores de forma orgânica.</p></div><div class="card"><h4>Pouco Engajamento</h4><p>Posts com poucas curtidas, comentários e compartilhamentos.</p></div><div class="card"><h4>Identidade Visual</h4><p>Falta de um padrão visual que conecte e profissionalize a marca.</p></div><div class="card"><h4>Tráfego Pago</h4><p>Ausência de campanhas de anúncios otimizadas para gerar vendas.</p></div></div></div>
+        <div class="container" data-aos="fade-up">
+            <h2>Os Desafios Atuais da Arca Turismo</h2>
+            <div class="grid-4">
+                <div class="card"><h4>Baixo Alcance</h4><p>Dificuldade em alcançar novos seguidores de forma orgânica.</p></div>
+                <div class="card"><h4>Pouco Engajamento</h4><p>Posts com poucas curtidas, comentários e compartilhamentos.</p></div>
+                <div class="card"><h4>Identidade Visual</h4><p>Falta de um padrão visual que conecte e profissionalize a marca.</p></div>
+                <div class="card"><h4>Tráfego Pago</h4><p>Ausência de campanhas de anúncios otimizadas para gerar vendas.</p></div>
+            </div>
+        </div>
     </section>
     
     <section id="proposta" class="section">
         <div class="container">
-            <h2>Nosso Plano de Ação Detalhado</h2>
-            <p class="section-subtitle">Uma solução completa para posicionar a Arca Turismo como líder no digital.</p>
+            <h2 data-aos="fade-up">Nosso Plano de Ação Detalhado</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Uma solução completa para posicionar a Arca Turismo como líder no digital.</p>
             <div class="grid-3">
-                <div class="feature-card"><div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311a15.045 15.045 0 01-7.5 0C4.508 17.627 2.25 14.438 2.25 10.5 2.25 6.563 4.508 3.375 7.5 3.375c1.172 0 2.29.29 3.262.818M15 10.5a8.956 8.956 0 00-5.982-2.275M15 10.5c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z" /></svg></div><h3>Estratégia e Identidade Visual</h3><ul><li><span class="check">✔</span> Análise completa do perfil atual.</li><li><span class="check">✔</span> Criação de um Manual de Marca Visual.</li><li><span class="check">✔</span> Definição de paleta de cores, fontes e logo.</li><li><span class="check">✔</span> Templates para Posts, Stories e Reels.</li><li><span class="check">✔</span> Planejamento e Calendário Editorial.</li></ul></div>
-                <div class="feature-card"><div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg></div><h3>Conteúdo e Gestão de Tráfego</h3><ul><li><span class="check">✔</span> Criação de 3 posts semanais (design + copy).</li><li><span class="check">✔</span> Roteirização e edição de 4 Reels/mês.</li><li><span class="check">✔</span> Gestão Profissional de Meta Ads.</li><li><span class="check">✔</span> Criação de campanhas de alcance e conversão.</li><li><span class="check">✔</span> Otimização de público, criativos e verba.</li></ul></div>
-                <div class="feature-card"><div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12A2.25 2.25 0 0020.25 14.25V3M3.75 3l-1.48-1.48M3.75 3h16.5M12 16.5h.008v.008H12v-.008z" /></svg></div><h3>Análise e Crescimento Contínuo</h3><ul><li><span class="check">✔</span> Relatórios mensais de performance.</li><li><span class="check">✔</span> Análise de dados e insights para melhorias.</li><li><span class="check">✔</span> Otimização de Link na Bio (Linktree/Canva).</li><li><span class="check">✔</span> Configuração de Destaques Estratégicos.</li><li><span class="check">✔</span> Reuniões mensais de alinhamento.</li></ul></div>
+                <div class="feature-card" data-aos="fade-right"><div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311a15.045 15.045 0 01-7.5 0C4.508 17.627 2.25 14.438 2.25 10.5 2.25 6.563 4.508 3.375 7.5 3.375c1.172 0 2.29.29 3.262.818M15 10.5a8.956 8.956 0 00-5.982-2.275M15 10.5c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z" /></svg></div><h3>Estratégia e Identidade Visual</h3><ul><li><span class="check">✔</span> Análise completa do perfil atual.</li><li><span class="check">✔</span> Criação de um Manual de Marca Visual.</li><li><span class="check">✔</span> Definição de paleta de cores, fontes e logo.</li><li><span class="check">✔</span> Templates para Posts, Stories e Reels.</li><li><span class="check">✔</span> Planejamento e Calendário Editorial.</li></ul></div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200"><div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg></div><h3>Conteúdo e Gestão de Tráfego</h3><ul><li><span class="check">✔</span> Criação de 3 posts semanais (design + copy).</li><li><span class="check">✔</span> Roteirização e edição de 4 Reels/mês.</li><li><span class="check">✔</span> Gestão Profissional de Meta Ads.</li><li><span class="check">✔</span> Criação de campanhas de alcance e conversão.</li><li><span class="check">✔</span> Otimização de público, criativos e verba.</li></ul></div>
+                <div class="feature-card" data-aos="fade-left"><div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12A2.25 2.25 0 0020.25 14.25V3M3.75 3l-1.48-1.48M3.75 3h16.5M12 16.5h.008v.008H12v-.008z" /></svg></div><h3>Análise e Crescimento Contínuo</h3><ul><li><span class="check">✔</span> Relatórios mensais de performance.</li><li><span class="check">✔</span> Análise de dados e insights para melhorias.</li><li><span class="check">✔</span> Otimização de Link na Bio (Linktree/Canva).</li><li><span class="check">✔</span> Configuração de Destaques Estratégicos.</li><li><span class="check">✔</span> Reuniões mensais de alinhamento.</li></ul></div>
             </div>
         </div>
     </section>
 
     <section id="investimento" class="section bg-dark">
-        <div class="container text-center">
+        <div class="container" data-aos="fade-up">
             <h2>Investimento Estratégico</h2>
             <div class="investment-box">
                 <p class="price">R$ 4.200/mês</p>
@@ -76,12 +90,42 @@
     </section>
 
     <footer id="proximos-passos" class="footer">
-        <div class="container text-center">
+        <div class="container" data-aos="fade-up">
             <h2>Prontos para Decolar?</h2>
             <ol class="steps"><li><span>1</span> Aprovação da Proposta</li><li><span>2</span> Reunião de Alinhamento</li><li><span>3</span> Início das Ações!</li></ol>
             <a href="https://api.whatsapp.com/send?phone=5511943231311&text=RGD%20SOLU%C3%87%C3%95ES%20Muito%20obrigado%20pela%20proposta%21%20Qual%20o%20pr%C3%B3ximo%20passo%3F" target="_blank" class="cta-button final-cta">Aprovar e Agendar Reunião</a>
             <p class="contact-info">Clique no botão para aprovar a proposta e falarmos diretamente pelo WhatsApp.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa a biblioteca de animação
+        AOS.init({
+            once: true, // A animação acontece apenas uma vez
+            duration: 800, // Duração da animação
+        });
+
+        // Código para destacar o link ativo no menu
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('.nav-menu li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) { // O -100 ajusta o momento do "gatilho"
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
