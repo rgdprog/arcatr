@@ -36,7 +36,25 @@ html { scroll-behavior: smooth; }
 .card h4 { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem; }
 .feature-card { background: var(--white-color); padding: 2.5rem 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: left; }
 .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
-.feature-icon { margin-bottom: 1.5rem; color: var(--primary-color); }
+
+/* --- CORREÇÃO DEFINITIVA DOS ÍCONES --- */
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+    background-color: #FFF0E5; /* Cor de fundo laranja claro */
+    border-radius: 16px;
+    color: var(--primary-color);
+}
+.feature-icon svg {
+    width: 32px; /* Tamanho do ícone SVG */
+    height: 32px;
+}
+/* --- FIM DA CORREÇÃO --- */
+
 .feature-card h3 { margin-bottom: 1.5rem; color: var(--dark-color); font-size: 1.4rem; }
 .feature-card ul { list-style: none; padding: 0; }
 .feature-card ul li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
@@ -61,8 +79,6 @@ html { scroll-behavior: smooth; }
     .hero .subtitle { font-size: 1.2rem; }
     .section h2 { font-size: 2rem; }
 }
-
-/* ADIÇÃO PARA O TEXTO "NEGOCIÁVEL" */
 .negotiable {
     font-size: 1.2rem;
     font-weight: 400;
