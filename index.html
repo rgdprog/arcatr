@@ -13,7 +13,9 @@
 <body>
     <nav class="top-header">
         <div class="nav-container">
-            <img src="logo-rgd.png" alt="Logo RGD Soluções Gráficas" class="header-logo">
+            <a href="#">
+                <img src="logo-rgd.png" alt="Logo RGD Soluções Gráficas" class="header-logo">
+            </a>
             
             <button class="nav-toggle" aria-label="abrir menu">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="icon-hamburger">
@@ -107,7 +109,6 @@
             duration: 800, 
         });
 
-        // --- NOVO JAVASCRIPT PARA O MENU HAMBÚRGUER ---
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
@@ -115,16 +116,18 @@
             navMenu.classList.toggle('active');
         });
 
-        // Código antigo para destacar o link ativo no menu
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll('section, header');
         const navLi = document.querySelectorAll('.nav-menu li a');
+        
+        // Adicionado: Link do logo
+        const logoLink = document.querySelector('.top-header > a');
 
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
+                    current = section.getAttribute('id') || 'hero';
                 }
             });
 
