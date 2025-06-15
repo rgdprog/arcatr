@@ -10,7 +10,7 @@
 body { font-family: var(--font-family); line-height: 1.6; color: #333; background-color: var(--white-color); }
 html { scroll-behavior: smooth; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
-.section { padding: 4rem 0; overflow-x: hidden; /* Evita scroll horizontal por causa das animações */ }
+.section { padding: 4rem 0; overflow-x: hidden; }
 .section h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; color: var(--dark-color); }
 .section-subtitle { text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; }
 .text-center { text-align: center; }
@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 .cta-button { display: inline-block; padding: 12px 30px; background-color: var(--primary-color); color: var(--white-color); text-decoration: none; border-radius: 50px; font-weight: 600; transition: background-color 0.3s ease, transform 0.3s ease; border: none; }
 .cta-button:hover { background-color: var(--secondary-color); transform: translateY(-3px); }
 
-/* --- NOVO MENU DE NAVEGAÇÃO --- */
+/* --- MENU DE NAVEGAÇÃO COM AJUSTES PARA MOBILE --- */
 .top-header {
     background-color: var(--white-color);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -35,47 +35,54 @@ html { scroll-behavior: smooth; }
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px 30px;
+    padding: 12px 30px;
 }
-.header-logo {
-    height: 55px;
-    width: auto;
-}
+.header-logo { height: 60px; width: auto; }
+
+/* Estilo do Menu para Mobile (padrão) */
 .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 100%; /* Aparece abaixo do cabeçalho */
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
+.nav-menu.active {
+    display: flex; /* Mostra o menu quando o botão é clicado */
+}
+.nav-menu li { width: 100%; text-align: center; }
 .nav-menu a {
+    display: block;
+    padding: 1rem;
     text-decoration: none;
     color: var(--dark-color);
     font-weight: 500;
-    padding: 5px 0;
-    position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-}
-.nav-menu a:hover::after,
-.nav-menu a.active::after {
-    width: 100%;
-}
-.nav-menu a:hover,
-.nav-menu a.active {
+.nav-menu a:hover, .nav-menu a.active {
     color: var(--primary-color);
+    background-color: var(--light-color);
 }
+.nav-menu a::after { display: none; /* Remove a linha laranja no mobile */ }
 
+/* Botão Hambúrguer */
+.nav-toggle {
+    display: block; /* Visível no mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.icon-hamburger { width: 30px; height: 30px; color: var(--dark-color); }
+
+/* --- HERO E OUTRAS SEÇÕES --- */
 .hero { 
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
-    height: calc(100vh - 85px); /* Altura da tela MENOS altura do menu */
+    height: calc(100vh - 84px);
     min-height: 500px;
     color: var(--white-color); 
     display: flex; 
@@ -114,7 +121,21 @@ html { scroll-behavior: smooth; }
 .contact-info { font-size: 0.9rem; opacity: 0.7; }
 
 /* --- AJUSTES PARA TELAS MAIORES --- */
-@media (min-width: 768px) {
+@media (min-width: 820px) {
+    .nav-toggle { display: none; } /* Esconde o botão hambúrguer */
+    .nav-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        box-shadow: none;
+        padding: 0;
+        gap: 2rem;
+    }
+    .nav-menu a { padding: 5px 0; }
+    .nav-menu a::after { display: block; }
+    .nav-menu a:hover { background-color: transparent; }
+
     .section { padding: 6rem 0; }
     .section h2 { font-size: 2.5rem; }
     .hero h1 { font-size: 3.2rem; }
