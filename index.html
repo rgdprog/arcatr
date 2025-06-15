@@ -14,6 +14,13 @@
     <nav class="top-header">
         <div class="nav-container">
             <img src="logo-rgd.png" alt="Logo RGD Soluções Gráficas" class="header-logo">
+            
+            <button class="nav-toggle" aria-label="abrir menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="icon-hamburger">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
             <ul class="nav-menu">
                 <li><a href="#quem-somos">Time</a></li>
                 <li><a href="#proposta">Plano de Ação</a></li>
@@ -57,12 +64,7 @@
     <section id="desafios" class="section bg-light">
         <div class="container" data-aos="fade-up">
             <h2>Os Desafios Atuais da Arca Turismo</h2>
-            <div class="grid-4">
-                <div class="card"><h4>Baixo Alcance</h4><p>Dificuldade em alcançar novos seguidores de forma orgânica.</p></div>
-                <div class="card"><h4>Pouco Engajamento</h4><p>Posts com poucas curtidas, comentários e compartilhamentos.</p></div>
-                <div class="card"><h4>Identidade Visual</h4><p>Falta de um padrão visual que conecte e profissionalize a marca.</p></div>
-                <div class="card"><h4>Tráfego Pago</h4><p>Ausência de campanhas de anúncios otimizadas para gerar vendas.</p></div>
-            </div>
+            <div class="grid-4"><div class="card"><h4>Baixo Alcance</h4><p>Dificuldade em alcançar novos seguidores de forma orgânica.</p></div><div class="card"><h4>Pouco Engajamento</h4><p>Posts com poucas curtidas, comentários e compartilhamentos.</p></div><div class="card"><h4>Identidade Visual</h4><p>Falta de um padrão visual que conecte e profissionalize a marca.</p></div><div class="card"><h4>Tráfego Pago</h4><p>Ausência de campanhas de anúncios otimizadas para gerar vendas.</p></div></div>
         </div>
     </section>
     
@@ -100,13 +102,20 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inicializa a biblioteca de animação
         AOS.init({
-            once: true, // A animação acontece apenas uma vez
-            duration: 800, // Duração da animação
+            once: true,
+            duration: 800, 
         });
 
-        // Código para destacar o link ativo no menu
+        // --- NOVO JAVASCRIPT PARA O MENU HAMBÚRGUER ---
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Código antigo para destacar o link ativo no menu
         const sections = document.querySelectorAll('section');
         const navLi = document.querySelectorAll('.nav-menu li a');
 
@@ -114,7 +123,7 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) { // O -100 ajusta o momento do "gatilho"
+                if (pageYOffset >= sectionTop - 100) {
                     current = section.getAttribute('id');
                 }
             });
