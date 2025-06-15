@@ -38,9 +38,14 @@ html { scroll-behavior: smooth; }
 }
 .header-logo { height: 60px; width: auto; }
 
-/* AJUSTE FINAL: REMOVENDO AS BOLINHAS */
+/* CORREÇÃO DA BOLINHA - APLICANDO DIRETAMENTE NO 'LI' */
+.nav-menu, .nav-menu li {
+    list-style: none; /* <-- Garante que tanto o UL quanto o LI não tenham marcadores */
+    margin: 0;
+    padding: 0;
+}
+
 .nav-menu {
-    list-style: none; /* <-- ESSA LINHA REMOVE AS BOLINHAS */
     display: none; 
     position: absolute;
     top: 100%;
@@ -132,7 +137,6 @@ html { scroll-behavior: smooth; }
 @media (min-width: 820px) {
     .nav-toggle { display: none; } 
     .nav-menu {
-        list-style: none; /* <-- ESSA LINHA TAMBÉM GARANTE PARA DESKTOP */
         display: flex;
         position: static;
         flex-direction: row;
