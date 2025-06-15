@@ -38,7 +38,9 @@ html { scroll-behavior: smooth; }
 }
 .header-logo { height: 60px; width: auto; }
 
+/* AJUSTE FINAL: REMOVENDO AS BOLINHAS */
 .nav-menu {
+    list-style: none; /* <-- ESSA LINHA REMOVE AS BOLINHAS */
     display: none; 
     position: absolute;
     top: 100%;
@@ -108,13 +110,11 @@ html { scroll-behavior: smooth; }
 #investimento .investment-note { font-size: 1rem; font-weight: 300; margin-bottom: 2rem; opacity: 0.9; }
 #investimento ul { list-style: none; padding: 0; }
 #investimento li { margin-bottom: 0.8rem; }
-
-/* --- CORREÇÃO DO RODAPÉ --- */
 .footer { 
     background-color: var(--light-color); 
     color: var(--dark-color); 
     padding: 4rem 0;
-    text-align: center; /* 2º AJUSTE: Garante que tudo dentro dele seja centralizado */
+    text-align: center;
 }
 .steps { 
     list-style: none; 
@@ -129,10 +129,10 @@ html { scroll-behavior: smooth; }
 .final-cta { margin-bottom: 1rem; }
 .contact-info { font-size: 0.9rem; opacity: 0.7; }
 
-/* --- AJUSTES PARA TELAS MAIORES --- */
 @media (min-width: 820px) {
     .nav-toggle { display: none; } 
     .nav-menu {
+        list-style: none; /* <-- ESSA LINHA TAMBÉM GARANTE PARA DESKTOP */
         display: flex;
         position: static;
         flex-direction: row;
@@ -144,7 +144,7 @@ html { scroll-behavior: smooth; }
     .nav-menu a {
         padding: 8px 16px;
         border-radius: 50px;
-        white-space: nowrap; /* 1º AJUSTE: Impede que o texto quebre em duas linhas */
+        white-space: nowrap; 
     }
     .nav-menu a:hover, .nav-menu a.active {
         background-color: var(--light-color);
