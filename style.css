@@ -20,10 +20,10 @@ html { scroll-behavior: smooth; }
 .cta-button { display: inline-block; padding: 12px 30px; background-color: var(--primary-color); color: var(--white-color); text-decoration: none; border-radius: 50px; font-weight: 600; transition: background-color 0.3s ease, transform 0.3s ease; border: none; }
 .cta-button:hover { background-color: var(--secondary-color); transform: translateY(-3px); }
 
-/* --- AJUSTE FINAL DE PROPORÇÃO DO LOGO --- */
+/* --- AJUSTE FINAL E DEFINITIVO DO LOGO --- */
 .top-header {
     background-color: var(--white-color);
-    padding: 5px 0; /* <-- Espaçamento sutil para centralizar o novo logo */
+    padding: 10px 0; /* Um pouco mais de espaço para o logo maior */
     text-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     position: sticky;
@@ -31,7 +31,8 @@ html { scroll-behavior: smooth; }
     z-index: 1000;
 }
 .header-logo {
-    max-height: 50px; /* <-- Logo com tamanho proporcional ao cabeçalho */
+    height: 55px; /* ALTURA FIXA para garantir a visibilidade */
+    width: auto; /* Largura automática para manter a proporção */
 }
 
 /* --- SEÇÃO HERO AJUSTADA --- */
@@ -72,24 +73,4 @@ html { scroll-behavior: smooth; }
 #investimento li { margin-bottom: 0.8rem; }
 .footer { background-color: var(--light-color); color: var(--dark-color); padding: 4rem 0; }
 .steps { list-style: none; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin: 3rem 0; }
-.steps li { display: flex; align-items: center; gap: 1rem; font-size: 1.1rem; }
-.steps span { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: var(--primary-color); color: var(--white-color); border-radius: 50%; font-weight: 600; }
-.final-cta { margin-bottom: 1rem; }
-.contact-info { font-size: 0.9rem; opacity: 0.7; }
-
-@media (min-width: 768px) {
-    .section { padding: 6rem 0; }
-    .section h2 { font-size: 2.5rem; }
-    .hero h1 { font-size: 3.2rem; }
-    .hero .subtitle { font-size: 1.3rem; }
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
-    .steps { flex-direction: row; justify-content: center; gap: 2rem; }
-    #investimento .price { font-size: 3rem; }
-}
-@media (min-width: 960px) {
-    .team-grid { grid-template-columns: repeat(3, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-}
-@media (min-width: 1100px) {
-    .grid-4 { grid-template-columns: repeat(4, 1fr); }
-}
+.steps li { display: flex; align-items: center; gap: 1rem; font-size
